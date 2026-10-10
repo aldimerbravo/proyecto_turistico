@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explora Riviera Maya</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <header class="encabezado">
+    <h1>Explora Riviera Maya</h1>
+    <p>Selecciona y calcula tu experiencia turística</p>
+  </header>
+
+  <main class="contenedor">
+    <section class="controles" aria-label="Controles del catálogo">
+      <div>
+        <label class="sr-only" for="buscador">Buscar experiencia</label>
+        <input id="buscador" type="search" placeholder="Buscar experiencia...">
+      </div>
+
+      <div>
+        <label class="sr-only" for="filtroCategoria">Filtrar por categoría</label>
+        <select id="filtroCategoria">
+          <option value="todas">Todas las categorías</option>
+          <option value="naturaleza">Naturaleza</option>
+          <option value="cultura">Cultura</option>
+          <option value="aventura">Aventura</option>
+          <option value="relax">Relax</option>
+          <option value="historia">Historia</option>
+          <option value="gastronomia">Gastronomía</option>
+          <option value="bienestar">Bienestar</option>
+</select>
+        </select>
+      </div>
+
+      <div>
+        <label class="sr-only" for="ordenPrecio">Ordenar por precio</label>
+        <select id="ordenPrecio">
+          <option value="normal">Orden original</option>
+          <option value="ascendente">Menor precio</option>
+          <option value="descendente">Mayor precio</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="sr-only" for="precioMaximo">Precio máximo en pesos</label>
+        <input id="precioMaximo" type="number" min="0" step="50" placeholder="Precio máximo (MXN)">
+      </div>
+    </section>
+
+    <p id="estado" class="estado" role="status">Cargando experiencias...</p>
+    <p id="mensaje" class="mensaje" role="alert" hidden></p>
+    <div id="alertaCupo" class="modal-cupo" hidden>
+      <div class="modal-caja" role="alertdialog" aria-modal="true"
+           aria-labelledby="tituloAlertaCupo" aria-describedby="textoAlertaCupo">
+        <h2 id="tituloAlertaCupo">Aviso</h2>
+        <p id="textoAlertaCupo">La cantidad supera el cupo disponible</p>
+        <div class="modal-acciones">
+          <button id="cerrarAlertaCupo" class="modal-aceptar" type="button">Aceptar</button>
+        </div>
+      </div>
+    </div>
+
+    <section id="catalogo" class="catalogo" aria-label="Catálogo de experiencias"></section>
+
+    <section class="resumen" aria-labelledby="titulo-reservacion">
+      <h2 id="titulo-reservacion">Mi reservación</h2>
+      <div id="listaReservas"><p>No hay experiencias seleccionadas.</p></div>
+
+      <p class="personas">Total de personas: <span id="totalPersonas">0</span></p>
+      <p class="total">Total: <span id="total">$0 MXN</span></p>
+
+      <div class="acciones-reserva">
+        <button id="btnVaciar" class="btn-vaciar" type="button" hidden>Vaciar reservación</button>
+        <div id="confirmarVaciar" class="confirmacion" role="alertdialog"
+             aria-label="Confirmar vaciado de la reservación" hidden>
+          <p>¿Seguro que deseas borrar toda la reservación?</p>
+          <button id="btnConfirmarVaciar" class="btn-eliminar" type="button">Sí, vaciar</button>
+          <button id="btnCancelarVaciar" class="btn-cancelar" type="button">Cancelar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Proyecto académico de desarrollo front-end</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,370 @@
+:root {
+    --primario: #7aa7d9;
+    --secundario: #dceaf7;
+    --oscuro: #127270;
+    --claro: #fff;
+    --gris: #657587;
+    --peligro: #b3261e;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--oscuro);
+    background: #f4f7fa;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.encabezado {
+    min-height: 220px;
+    padding: 40px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--claro);
+    background: linear-gradient(135deg, #1d2d3f, #a9c9e8);
+}
+
+.encabezado h1 {
+    margin: 0 0 8px;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.encabezado p {
+    margin: 0;
+}
+
+.contenedor {
+    width: min(1100px, 90%);
+    margin: 30px auto;
+}
+
+/* Controles */
+.controles {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.controles input,
+.controles select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--primario);
+    border-radius: 10px;
+    background: var(--claro);
+    color: var(--oscuro);
+    font-size: 1rem;
+}
+
+.controles input:focus,
+.controles select:focus {
+    outline: 3px solid #7aa7d94d;
+    border-color: #5f8fc5;
+}
+
+.estado {
+    color: var(--gris);
+    margin: 15px 0;
+}
+
+.mensaje {
+    margin: 0 0 15px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.mensaje.error {
+    color: var(--peligro);
+    background: #fdecea;
+    border: 1px solid var(--peligro);
+}
+
+.mensaje.exito {
+    color: #1b5e20;
+    background: #e8f5e9;
+    border: 1px solid #1b5e20;
+}
+
+button {
+    border: 0;
+    border-radius: 10px;
+    padding: 10px 14px;
+    cursor: pointer;
+}
+
+button:focus-visible {
+    outline: 3px solid #5f8fc5;
+    outline-offset: 2px;
+}
+
+/* Catálogo */
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tarjeta {
+    overflow: hidden;
+    border-radius: 14px;
+    background: var(--claro);
+    box-shadow: 0 4px 12px #00000018;
+    transition: transform .2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.imagen {
+    min-height: 130px;
+    display: grid;
+    place-items: center;
+    background: var(--secundario);
+    font-size: 3.5rem;
+}
+
+.informacion {
+    padding: 18px;
+}
+
+.categoria {
+    color: #3f6ea3;
+    font-size: .8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.precio {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.tarjeta input[type="number"] {
+    width: 75px;
+    padding: 8px;
+    margin: 10px 0;
+}
+
+.btn-reservar {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    color: var(--claro);
+    background: #3f6ea3;
+}
+
+.btn-reservar:hover {
+    background: var(--oscuro);
+}
+
+.sin-resultados {
+    grid-column: 1 / -1;
+    padding: 30px;
+    text-align: center;
+    background: var(--claro);
+    border-radius: 14px;
+}
+
+/* Mi reservación */
+.resumen {
+    margin-top: 35px;
+    padding: 25px;
+    background: var(--claro);
+    border-radius: 14px;
+    box-shadow: 0 4px 12px #00000018;
+}
+
+.item-reserva {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.item-reserva p {
+    margin: 5px 0;
+}
+
+.control-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+}
+
+.btn-cantidad {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    font-size: 1.2rem;
+    color: var(--claro);
+    background: #3f6ea3;
+}
+
+.btn-cantidad:disabled {
+    background: #b8c5d3;
+    cursor: not-allowed;
+}
+
+.btn-eliminar {
+    color: var(--claro);
+    background: var(--peligro);
+    margin-top: 8px;
+}
+
+.btn-vaciar {
+    color: var(--peligro);
+    background: var(--claro);
+    border: 1px solid var(--peligro);
+}
+
+.btn-cancelar {
+    color: var(--oscuro);
+    background: var(--secundario);
+}
+
+.confirmacion {
+    padding: 15px;
+    border: 1px solid var(--peligro);
+    border-radius: 10px;
+    background: #fdecea;
+}
+
+.confirmacion p {
+    margin: 0 0 10px;
+}
+
+.acciones-reserva {
+    margin-top: 15px;
+}
+
+.personas {
+    text-align: right;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.total {
+    text-align: right;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: var(--claro);
+    background: var(--oscuro);
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width:850px) {
+    .catalogo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .controles {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .controles > div:first-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width:550px) {
+    .catalogo,
+    .controles {
+        grid-template-columns: 1fr;
+    }
+
+    .controles > div:first-child {
+        grid-column: auto;
+    }
+
+    .encabezado {
+        min-height: 180px;
+        padding: 30px 5%;
+    }
+
+    .item-reserva {
+        flex-direction: column;
+    }
+}
+
+/* Alerta azul (estilo cuadro de diálogo): se muestra al superar el cupo */
+.modal-cupo {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 40px;
+    background: #0a1a2e55;
+}
+
+.modal-caja {
+    width: min(420px, 92%);
+    padding: 24px;
+    color: var(--claro);
+    background: #1f3b5c;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px #00000066;
+}
+
+.modal-caja h2 {
+    margin: 0 0 14px;
+    font-size: 1.1rem;
+}
+
+.modal-caja p {
+    margin: 0 0 24px;
+}
+
+.modal-acciones {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-aceptar {
+    padding: 10px 22px;
+    color: #1f3b5c;
+    background: #a9c9e8;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.modal-aceptar:hover {
+    background: #cfe2f6;
+}
+
+.modal-aceptar:focus-visible {
+    outline: 3px solid #7aa7d9;
+    outline-offset: 2px;
+}

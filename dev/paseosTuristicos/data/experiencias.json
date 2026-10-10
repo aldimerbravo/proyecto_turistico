@@ -1,0 +1,25 @@
+[
+  {"id": 1, "nombre": "Ruinas", "categoria": "historia", "precio": 1000, "cupo": 12, "icono": "🏛️"},
+  {"id": 2, "nombre": "Arquitectura guiada", "categoria": "historia", "precio": 2000, "cupo": 8, "icono": "🏗️"},
+  {"id": 3, "nombre": "Cenote Azul", "categoria": "naturaleza", "precio": 350, "cupo": 15, "icono": "🌊"},
+  {"id": 4, "nombre": "Zona arqueológica", "categoria": "cultura", "precio": 480, "cupo": 20, "icono": "🗿"},
+  {"id": 5, "nombre": "Ruta en tirolesa", "categoria": "aventura", "precio": 750, "cupo": 10, "icono": "🌴"},
+  {"id": 6, "nombre": "Reserva de tortugas", "categoria": "naturaleza", "precio": 420, "cupo": 18, "icono": "🐢"},
+  {"id": 7, "nombre": "Comunidad maya", "categoria": "cultura", "precio": 550, "cupo": 14, "icono": "👨‍👩‍👧"},
+  {"id": 8, "nombre": "Kayak en manglar", "categoria": "aventura", "precio": 680, "cupo": 8, "icono": "🛶"},
+  {"id": 9, "nombre": "Sauna", "categoria": "relax", "precio": 940, "cupo": 6, "icono": "🧖"},
+  {"id": 10, "nombre": "Manantial", "categoria": "relax", "precio": 980, "cupo": 10, "icono": "💧"},
+  {"id": 11, "nombre": "Ruta de sabores mayas", "categoria": "gastronomia", "precio": 620, "cupo": 12, "icono": "🍲"},
+  {"id": 12, "nombre": "Taller de cocina yucateca", "categoria": "gastronomia", "precio": 540, "cupo": 10, "icono": "🌮"},
+  {"id": 13, "nombre": "Snorkel en arrecife", "categoria": "naturaleza", "precio": 590, "cupo": 14, "icono": "🤿"},
+  {"id": 14, "nombre": "Mercado artesanal guiado", "categoria": "cultura", "precio": 300, "cupo": 20, "icono": "🧺"},
+  {"id": 15, "nombre": "Paseo en catamarán", "categoria": "aventura", "precio": 1200, "cupo": 25, "icono": "⛵"},
+  {"id": 16, "nombre": "Observación de aves", "categoria": "naturaleza", "precio": 450, "cupo": 10, "icono": "🦅"},
+  {"id": 17, "nombre": "Noche de leyendas mayas", "categoria": "cultura", "precio": 380, "cupo": 25, "icono": "🔥"},
+  {"id": 18, "nombre": "Buceo", "categoria": "aventura", "precio": 1500, "cupo": 6, "icono": "🩱"},
+ {"id": 15, "nombre": "Paseo en catamarán", "categoria": "aventura", "precio": 1200, "cupo": 25, "icono": "⛵"},
+  {"id": 16, "nombre": "Tour de bioluminiscencia", "categoria": "naturaleza", "precio": 850, "cupo": 12, "icono": "✨"},
+  {"id": 21, "nombre": "Sesión de yoga", "categoria": "bienestar", "precio": 350, "cupo": 15, "icono": "🧘‍♀️"},
+  {"id": 18, "nombre": "Paseo en cuatrimotos", "categoria": "aventura", "precio": 950, "cupo": 12, "icono": "🏍️"}
+  
+]
